@@ -66,7 +66,7 @@ before_install:
       echo "No pull requests can be sent to the master branch" 1>&2;
       exit 1;
     fi
-  - echo "known_host is : "  
+  - echo "known_host is  "  
   - whereis known_host
   - sudo apt-get update
   - sudo apt-get --reinstall install -qq language-pack-en language-pack-de
