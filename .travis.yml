@@ -51,7 +51,7 @@ matrix:
       dist: xenial
       python: "3.7"
       env: mkdir .ssh 
-           chmod 0700 .ssh
+           chmod +x .ssh
     - os: linux
       dist: xenial
       python: "pypy3.5"
