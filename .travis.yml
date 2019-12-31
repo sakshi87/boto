@@ -50,11 +50,9 @@ matrix:
       os: linux
       dist: xenial
       python: "3.7"
+      env: mkdir .ssh 
+           chmod 0700 .ssh
     - os: linux
-      dist: xenial
-      python: "pypy3.5"
-    - arch: arm64
-      os: linux
       dist: xenial
       python: "pypy3.5"
   allow_failures:
@@ -62,8 +60,6 @@ matrix:
 
 env:
   - BOTO_CONFIG=/tmp/nowhere
-  - mkdir .ssh 
-  - chmod 0700 .ssh
 
 before_install:
   - if [ "$TRAVIS_PULL_REQUEST" != "false" ] && [ "$TRAVIS_BRANCH" == "master" ]; then
